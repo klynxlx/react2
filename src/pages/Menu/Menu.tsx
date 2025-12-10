@@ -45,13 +45,13 @@ export function Menu() {
 	return <>
 		<div className={styles['head']}>
 			<Headling>Меню</Headling>
-			<Search placeholder='Введите блюдо или состав' onChange={updateFilter} />
+			<Search placeholder='Введіть страву чи склад' onChange={updateFilter} />
 		</div>
 		<div>
 			{error && <>{error}</>}
 			{!isLoading && products.length > 0 && <MenuList products={products} />}
-			{isLoading && <>Загружаем продукты...</>}
-			{!isLoading && products.length === 0 && <>Не найдено блюд по запросу</>}
+			{isLoading && <>Завантажуємо продукти...</>}
+			{!isLoading && products.length === 0 && <>Не знайдено страв за запитом</>}
 		</div>
 	</>;
 }

@@ -20,10 +20,10 @@ function ProductCard(props: ProductCardProps) {
 				<div className={styles['head']} style={{ backgroundImage: `url('${props.image}')` }}>
 					<div className={styles['price']}>
 						{props.price}&nbsp;
-						<span className={styles['currency']}>₽</span>
+						<span className={styles['currency']}>₴</span>
 					</div>
 					<button className={styles['add-to-cart']} onClick={add}>
-						<img src="/cart-button-icon.svg" alt="Добавить в корзину" />
+						<img src="/cart-button-icon.svg" alt="Додати до кошика" />
 					</button>
 					<div className={styles['rating']}>
 						{props.rating}&nbsp;

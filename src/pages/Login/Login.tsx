@@ -41,7 +41,7 @@ export function Login() {
 	};
 
 	return <div className={styles['login']}>
-		<Headling>Вход</Headling>
+		<Headling>Вхід</Headling>
 		{loginErrorMessage && <div className={styles['error']}>{loginErrorMessage}</div>}
 		<form className={styles['form']} onSubmit={submit}>
 			<div className={styles['field']}>
@@ -52,11 +52,11 @@ export function Login() {
 				<label htmlFor="password">Ваш пароль</label>
 				<Input id="password" name='password' type="password" placeholder='Пароль' />
 			</div>
-			<Button appearence="big">Вход</Button>
+			<Button appearence="big">Вхід</Button>
 		</form>
 		<div className={styles['links']}>
-			<div>Нет акканута?</div>
-			<Link to="/auth/register">Зарегистрироваться</Link>
+			<div>Немає аккануту?</div>
+			<Link to="/auth/register">Зареєструватися</Link>
 		</div>
 	</div>;
 }

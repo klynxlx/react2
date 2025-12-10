@@ -29,14 +29,14 @@ function CartItem(props: CartItemProps) {
 			</div>
 			<div className={styles['actions']}>
 				<button className={styles['minus']} onClick={descrease}>
-					<img src="/minus-icon.svg" alt="Удалить из корзины" />
+					<img src="/minus-icon.svg" alt="Видалити з кошика" />
 				</button>
 				<div className={styles['number']}>{props.count}</div>
 				<button className={styles['plus']} onClick={increase}>
-					<img src="/plus-icon.svg" alt="Добавить в корзину" />
+					<img src="/plus-icon.svg" alt="Додати до кошика" />
 				</button>
 				<button className={styles['remove']} onClick={remove}>
-					<img src="/delete-icon.svg" alt="Удалить все" />
+					<img src="/delete-icon.svg" alt="Видалити все" />
 				</button>
 			</div>
 		</div>

@@ -40,7 +40,7 @@ export function Register() {
 	};
 
 	return <div className={styles['login']}>
-		<Headling>Регистрация</Headling>
+		<Headling>Реєстрація</Headling>
 		{registerErrorMessage && <div className={styles['error']}>{registerErrorMessage}</div>}
 		<form className={styles['form']} onSubmit={submit}>
 			<div className={styles['field']}>
@@ -52,14 +52,14 @@ export function Register() {
 				<Input id="password" name='password' type="password" placeholder='Пароль' />
 			</div>
 			<div className={styles['field']}>
-				<label htmlFor="name">Ваше имя</label>
+				<label htmlFor="name">Ваше ім'я</label>
 				<Input id="name" name='name' placeholder='Имя' />
 			</div>
-			<Button appearence="big">Зарегистрироваться</Button>
+			<Button appearence="big">Зареєструватися</Button>
 		</form>
 		<div className={styles['links']}>
-			<div>Есть акканут?</div>
-			<Link to="/auth/login">Войти</Link>
+			<div>Є акканут?</div>
+			<Link to="/auth/login">Увійти</Link>
 		</div>
 	</div>;
 }

@@ -56,7 +56,7 @@ export function Cart() {
 	}, [items]);
 
 	return <>
-		<Headling className={styles['headling']}>Корзина</Headling>
+		<Headling className={styles['headling']}>Кошик</Headling>
 		{items.map(i => {
 			const product = cartProducts.find(p => p.id === i.id);
 			if (!product) {
@@ -65,7 +65,7 @@ export function Cart() {
 			return <CartItem key={product.id} count={i.count} {...product} />;
 		})}
 		<div className={styles['line']}>
-			<div className={styles['text']}>Итог</div>
+			<div className={styles['text']}>Підсумок</div>
 			<div className={styles['price']}>{total}&nbsp;<span>₽</span></div>
 		</div>
 		<hr className={styles['hr']} />
@@ -75,11 +75,11 @@ export function Cart() {
 		</div>
 		<hr className={styles['hr']} />
 		<div className={styles['line']}>
-			<div className={styles['text']}>Итог <span className={styles['total-count']}>({items.length})</span></div>
+			<div className={styles['text']}>Підсумок <span className={styles['total-count']}>({items.length})</span></div>
 			<div className={styles['price']}>{total + DELIVERY_FEE}&nbsp;<span>₽</span></div>
 		</div>
 		<div className={styles['checkout']}>
-			<Button appearence="big" onClick={checkout}>оформить</Button>
+			<Button appearence="big" onClick={checkout}>оформити</Button>
 		</div>
 	</>;
 }

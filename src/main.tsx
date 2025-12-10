@@ -38,7 +38,7 @@ const router = createBrowserRouter([
 			{
 				path: '/product/:id',
 				element: <Product />,
-				errorElement: <>Ошибка</>,
+				errorElement: <>Помилка</>,
 				loader: async ({ params }) => {
 					return defer({
 						data: new Promise((resolve, reject) => {
