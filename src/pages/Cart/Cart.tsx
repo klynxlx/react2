@@ -10,6 +10,8 @@ import styles from './Cart.module.css';
 import Button from '../../components/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { cartActions } from '../../store/cart.slice';
+import { productTranslations } from '../../helpers/productTranslations';
+
 
 const DELIVERY_FEE = 169;
 
@@ -36,7 +38,18 @@ export function Cart() {
 
 	const loadAllItems = async () => {
 		const res = await Promise.all(items.map(i => getItem(i.id)));
-		setCardProducts(res);
+		 const translated = res.map(p => {
+    const translation = productTranslations[p.name.toLowerCase()];
+    if (translation) {
+      return {
+        ...p,
+        name: translation.name,
+        ingredients: [translation.description], // або ingredients.split(', ') якщо потрібно
+      };
+    }
+    return p;
+  });
+		setCardProducts(translated);
 	};
 
 	const checkout = async () => {
