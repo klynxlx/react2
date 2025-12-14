@@ -44,7 +44,7 @@ export function Cart() {
       return {
         ...p,
         name: translation.name,
-        ingredients: [translation.description], // або ingredients.split(', ') якщо потрібно
+        ingredients: [translation.description], 
       };
     }
     return p;
@@ -79,17 +79,17 @@ export function Cart() {
 		})}
 		<div className={styles['line']}>
 			<div className={styles['text']}>Підсумок</div>
-			<div className={styles['price']}>{total}&nbsp;<span>₽</span></div>
+			<div className={styles['price']}>{total}&nbsp;<span>₴</span></div>
 		</div>
 		<hr className={styles['hr']} />
 		<div className={styles['line']}>
 			<div className={styles['text']}>Доставка</div>
-			<div className={styles['price']}>{DELIVERY_FEE}&nbsp;<span>₽</span></div>
+			<div className={styles['price']}>{DELIVERY_FEE}&nbsp;<span>₴</span></div>
 		</div>
 		<hr className={styles['hr']} />
 		<div className={styles['line']}>
 			<div className={styles['text']}>Підсумок <span className={styles['total-count']}>({items.length})</span></div>
-			<div className={styles['price']}>{total + DELIVERY_FEE}&nbsp;<span>₽</span></div>
+			<div className={styles['price']}>{total + DELIVERY_FEE}&nbsp;<span>₴</span></div>
 		</div>
 		<div className={styles['checkout']}>
 			<Button appearence="big" onClick={checkout}>оформити</Button>

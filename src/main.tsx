@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <Suspense fallback={<>Загрузка...</>}><Menu /></Suspense>
+				element: <Suspense fallback={<>Завантаження...</>}><Menu /></Suspense>
 			},
 			{
 				path: '/success',
